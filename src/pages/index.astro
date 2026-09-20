@@ -2,12 +2,12 @@
 import Layout from '../layouts/Layout.astro'
 
 const services = [
-  { name: 'Emergency Care', desc: '24/7 emergency response and trauma care.' },
-  { name: 'Cardiology', desc: 'Heart health diagnostics and treatment.' },
-  { name: 'Orthopedics', desc: 'Bone, joint, and muscle care.' },
-  { name: 'Pediatrics', desc: 'Comprehensive care for children.' },
-  { name: 'General Surgery', desc: 'Advanced surgical procedures.' },
-  { name: 'Diagnostics & Lab', desc: 'On-site testing and imaging.' },
+  { name: 'General Surgery', desc: 'Comprehensive surgical care for a wide range of conditions, from routine to complex procedures.' },
+  { name: 'Laparoscopic Surgery', desc: 'Minimally invasive keyhole surgery for faster recovery and less discomfort.' },
+  { name: 'Endoscopy', desc: 'Advanced diagnostic and therapeutic procedures for the digestive system.' },
+  { name: 'IRC Surgery', desc: 'Specialized treatment for hemorrhoids using infrared coagulation.' },
+  { name: 'Proctology', desc: 'Dedicated care for conditions of the rectum and anus, diagnosed and treated with expertise.' },
+  { name: 'In-Patient Care', desc: '10-bed facility with private, semi-private, and general ward options for comfortable recovery.' },
 ]
 
 const doctors = [
@@ -17,24 +17,27 @@ const doctors = [
   { name: 'Dr. M. Ali', specialty: 'General Physician' },
 ]
 ---
-<Layout title="Noor Sayyad Hospital">
+<Layout title="Sayyad Hospital">
 
   <section id="home" class="relative bg-gradient-to-b from-sky-50 to-white pt-20 pb-24 px-6 overflow-hidden">
     <div class="max-w-5xl mx-auto text-center">
       <span class="inline-block bg-sky-100 text-sky-700 text-xs font-semibold px-4 py-1.5 rounded-full mb-6">
-        24/7 Emergency Care Available
+        Trusted Family Care Since 25+ years
       </span>
-      <h1 class="text-4xl md:text-6xl font-bold text-slate-800 tracking-tight leading-tight">
-        Compassionate Care,<br class="hidden md:block" /> Trusted Every Day
+      <h1 class="text-3xl md:text-5xl font-bold text-sky-700 tracking-tight leading-tight">
+        "We treat, He cures." ☪️
       </h1>
+      <h2 class="mt-4 text-2xl md:text-4xl font-semibold text-slate-800 tracking-tight leading-tight">
+        Compassionate Care,<br class="hidden md:block" /> Trusted Every Day
+      </h2>
       <p class="mt-6 text-lg text-slate-500 max-w-2xl mx-auto">
-        Noor Sayyad Hospital brings together experienced doctors, modern facilities, and a patient-first approach to healthcare.
+        Sayyad Hospital brings together experienced doctors, modern facilities, and a patient-first approach to healthcare.
       </p>
       <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="tel:+911234567890" class="bg-sky-700 text-white px-8 py-3.5 rounded-full font-medium hover:bg-sky-800 transition-colors shadow-md">
+        <a href="tel:+919970249786" class="bg-sky-700 text-white px-8 py-3.5 rounded-full font-medium hover:bg-sky-800 transition-colors shadow-md">
           Call Now
         </a>
-        <a href="https://wa.me/911234567890" target="_blank" class="bg-white border border-slate-200 text-slate-700 px-8 py-3.5 rounded-full font-medium hover:border-sky-400 transition-colors">
+        <a href="https://wa.me/+919970249786" target="_blank" class="bg-white border border-slate-200 text-slate-700 px-8 py-3.5 rounded-full font-medium hover:border-sky-400 transition-colors">
           WhatsApp Us
         </a>
       </div>
@@ -46,12 +49,12 @@ const doctors = [
       <div>
         <h2 class="text-3xl font-bold text-slate-800 mb-4">About Us</h2>
         <p class="text-slate-500 leading-relaxed">
-          For years, Noor Sayyad Hospital has served the community with dedicated medical professionals and modern equipment. We believe healthcare should be accessible, respectful, and delivered with genuine care for every patient who walks through our doors.
+          For years, Sayyad Hospital has served the community with dedicated medical professionals and modern equipment. We believe healthcare should be accessible, respectful, and delivered with genuine care for every patient who walks through our doors.
         </p>
       </div>
       <div class="grid grid-cols-2 gap-4">
         <div class="bg-sky-50 rounded-2xl p-6 text-center">
-          <p class="text-3xl font-bold text-sky-700">15+</p>
+          <p class="text-3xl font-bold text-sky-700">25+</p>
           <p class="text-sm text-slate-500 mt-1">Years of Service</p>
         </div>
         <div class="bg-sky-50 rounded-2xl p-6 text-center">
@@ -59,8 +62,8 @@ const doctors = [
           <p class="text-sm text-slate-500 mt-1">Expert Doctors</p>
         </div>
         <div class="bg-sky-50 rounded-2xl p-6 text-center">
-          <p class="text-3xl font-bold text-sky-700">24/7</p>
-          <p class="text-sm text-slate-500 mt-1">Emergency Care</p>
+          <p class="text-3xl font-bold text-sky-700">Trusted Family Care</p>
+          <p class="text-sm text-slate-500 mt-1">Accepting Patients Soon</p>
         </div>
         <div class="bg-sky-50 rounded-2xl p-6 text-center">
           <p class="text-3xl font-bold text-sky-700">10k+</p>
@@ -114,25 +117,25 @@ const doctors = [
       <div class="grid sm:grid-cols-3 gap-6 text-left">
         <div class="bg-sky-600/40 rounded-2xl p-6">
           <p class="text-sm text-sky-200 mb-1">Address</p>
-          <p class="font-medium">123 Main Road, Mumbai, Maharashtra</p>
+          <p class="font-medium">123 Main ,Karad, Maharashtra</p>
         </div>
         <div class="bg-sky-600/40 rounded-2xl p-6">
           <p class="text-sm text-sky-200 mb-1">Phone</p>
-          <a href="tel:+911234567890" class="font-medium hover:underline">+91 12345 67890</a>
+          <a href="tel:+911234567890" class="font-medium hover:underline">+91 99702 49786</a>
         </div>
         <div class="bg-sky-600/40 rounded-2xl p-6">
           <p class="text-sm text-sky-200 mb-1">Hours</p>
           <p class="font-medium">Open 24/7 for Emergencies</p>
         </div>
       </div>
-      <a href="https://wa.me/911234567890" target="_blank" class="inline-block mt-10 bg-white text-sky-700 px-8 py-3.5 rounded-full font-medium hover:bg-sky-50 transition-colors">
+      <a href="https://wa.me/+919970249786" target="_blank" class="inline-block mt-10 bg-white text-sky-700 px-8 py-3.5 rounded-full font-medium hover:bg-sky-50 transition-colors">
         Message Us on WhatsApp
       </a>
     </div>
   </section>
 
   <footer class="bg-slate-900 text-slate-400 text-center py-6 text-sm">
-    © 2026 Noor Sayyad Hospital. All rights reserved.
+    © 2026 Sayyad Hospital. All rights reserved.
   </footer>
 
 </Layout>
