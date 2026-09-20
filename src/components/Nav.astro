@@ -1,0 +1,60 @@
+---
+const links = [
+  { href: '#home', label: 'Home' },
+  { href: '#about', label: 'About' },
+  { href: '#services', label: 'Services' },
+  { href: '#doctors', label: 'Doctors' },
+  { href: '#contact', label: 'Contact' },
+]
+---
+<header class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50">
+  <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="#home" class="text-xl font-bold text-sky-700 tracking-tight">
+      Noor Sayyad Hospital
+    </a>
+
+    <ul class="hidden md:flex gap-8 text-slate-600 font-medium text-sm">
+      {links.map((link) => (
+        <li>
+          <a href={link.href} class="hover:text-sky-700 transition-colors">
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <a href="tel:+911234567890" class="hidden md:inline-flex items-center gap-2 bg-sky-700 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-sky-800 transition-colors shadow-sm">
+      Call Now
+    </a>
+
+    <button id="menu-btn" class="md:hidden text-slate-700" aria-label="Toggle menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </nav>
+
+  <ul id="mobile-menu" class="hidden md:hidden flex-col gap-1 px-6 pb-4 text-slate-600 font-medium">
+    {links.map((link) => (
+      <li>
+        <a href={link.href} class="block py-2 hover:text-sky-700">
+          {link.label}
+        </a>
+      </li>
+    ))}
+    <li>
+      <a href="tel:+911234567890" class="block bg-sky-700 text-white px-4 py-2.5 rounded-full text-center mt-2">
+        Call Now
+      </a>
+    </li>
+  </ul>
+</header>
+
+<script>
+  const btn = document.getElementById('menu-btn')
+  const menu = document.getElementById('mobile-menu')
+  btn?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden')
+    menu?.classList.toggle('flex')
+  })
+</script>

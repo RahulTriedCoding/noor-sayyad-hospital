@@ -1,0 +1,138 @@
+---
+import Layout from '../layouts/Layout.astro'
+
+const services = [
+  { name: 'Emergency Care', desc: '24/7 emergency response and trauma care.' },
+  { name: 'Cardiology', desc: 'Heart health diagnostics and treatment.' },
+  { name: 'Orthopedics', desc: 'Bone, joint, and muscle care.' },
+  { name: 'Pediatrics', desc: 'Comprehensive care for children.' },
+  { name: 'General Surgery', desc: 'Advanced surgical procedures.' },
+  { name: 'Diagnostics & Lab', desc: 'On-site testing and imaging.' },
+]
+
+const doctors = [
+  { name: 'Dr. A. Sayyad', specialty: 'Cardiologist' },
+  { name: 'Dr. S. Noor', specialty: 'Orthopedic Surgeon' },
+  { name: 'Dr. R. Khan', specialty: 'Pediatrician' },
+  { name: 'Dr. M. Ali', specialty: 'General Physician' },
+]
+---
+<Layout title="Noor Sayyad Hospital">
+
+  <section id="home" class="relative bg-gradient-to-b from-sky-50 to-white pt-20 pb-24 px-6 overflow-hidden">
+    <div class="max-w-5xl mx-auto text-center">
+      <span class="inline-block bg-sky-100 text-sky-700 text-xs font-semibold px-4 py-1.5 rounded-full mb-6">
+        24/7 Emergency Care Available
+      </span>
+      <h1 class="text-4xl md:text-6xl font-bold text-slate-800 tracking-tight leading-tight">
+        Compassionate Care,<br class="hidden md:block" /> Trusted Every Day
+      </h1>
+      <p class="mt-6 text-lg text-slate-500 max-w-2xl mx-auto">
+        Noor Sayyad Hospital brings together experienced doctors, modern facilities, and a patient-first approach to healthcare.
+      </p>
+      <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:+911234567890" class="bg-sky-700 text-white px-8 py-3.5 rounded-full font-medium hover:bg-sky-800 transition-colors shadow-md">
+          Call Now
+        </a>
+        <a href="https://wa.me/911234567890" target="_blank" class="bg-white border border-slate-200 text-slate-700 px-8 py-3.5 rounded-full font-medium hover:border-sky-400 transition-colors">
+          WhatsApp Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-24 px-6 bg-white">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-3xl font-bold text-slate-800 mb-4">About Us</h2>
+        <p class="text-slate-500 leading-relaxed">
+          For years, Noor Sayyad Hospital has served the community with dedicated medical professionals and modern equipment. We believe healthcare should be accessible, respectful, and delivered with genuine care for every patient who walks through our doors.
+        </p>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="bg-sky-50 rounded-2xl p-6 text-center">
+          <p class="text-3xl font-bold text-sky-700">15+</p>
+          <p class="text-sm text-slate-500 mt-1">Years of Service</p>
+        </div>
+        <div class="bg-sky-50 rounded-2xl p-6 text-center">
+          <p class="text-3xl font-bold text-sky-700">20+</p>
+          <p class="text-sm text-slate-500 mt-1">Expert Doctors</p>
+        </div>
+        <div class="bg-sky-50 rounded-2xl p-6 text-center">
+          <p class="text-3xl font-bold text-sky-700">24/7</p>
+          <p class="text-sm text-slate-500 mt-1">Emergency Care</p>
+        </div>
+        <div class="bg-sky-50 rounded-2xl p-6 text-center">
+          <p class="text-3xl font-bold text-sky-700">10k+</p>
+          <p class="text-sm text-slate-500 mt-1">Patients Treated</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="py-24 px-6 bg-slate-50">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl font-bold text-slate-800">Our Services</h2>
+        <p class="text-slate-500 mt-3">Comprehensive care across every department</p>
+      </div>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {services.map((s) => (
+          <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow border border-slate-100">
+            <h3 class="font-semibold text-slate-800 mb-2">{s.name}</h3>
+            <p class="text-sm text-slate-500">{s.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="doctors" class="py-24 px-6 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl font-bold text-slate-800">Meet Our Doctors</h2>
+        <p class="text-slate-500 mt-3">Experienced specialists dedicated to your health</p>
+      </div>
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+        {doctors.map((d) => (
+          <div class="text-center">
+            <div class="w-24 h-24 mx-auto rounded-full bg-sky-100 flex items-center justify-center text-sky-700 font-bold text-xl">
+              {d.name.split(' ').map((n) => n[0]).join('')}
+            </div>
+            <h3 class="font-semibold text-slate-800 mt-4">{d.name}</h3>
+            <p class="text-sm text-slate-500">{d.specialty}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-24 px-6 bg-sky-700 text-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold">Get in Touch</h2>
+      <p class="text-sky-100 mt-3 mb-10">We're here to help, anytime you need us.</p>
+      <div class="grid sm:grid-cols-3 gap-6 text-left">
+        <div class="bg-sky-600/40 rounded-2xl p-6">
+          <p class="text-sm text-sky-200 mb-1">Address</p>
+          <p class="font-medium">123 Main Road, Mumbai, Maharashtra</p>
+        </div>
+        <div class="bg-sky-600/40 rounded-2xl p-6">
+          <p class="text-sm text-sky-200 mb-1">Phone</p>
+          <a href="tel:+911234567890" class="font-medium hover:underline">+91 12345 67890</a>
+        </div>
+        <div class="bg-sky-600/40 rounded-2xl p-6">
+          <p class="text-sm text-sky-200 mb-1">Hours</p>
+          <p class="font-medium">Open 24/7 for Emergencies</p>
+        </div>
+      </div>
+      <a href="https://wa.me/911234567890" target="_blank" class="inline-block mt-10 bg-white text-sky-700 px-8 py-3.5 rounded-full font-medium hover:bg-sky-50 transition-colors">
+        Message Us on WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <footer class="bg-slate-900 text-slate-400 text-center py-6 text-sm">
+    © 2026 Noor Sayyad Hospital. All rights reserved.
+  </footer>
+
+</Layout>
