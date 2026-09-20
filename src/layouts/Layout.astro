@@ -6,7 +6,7 @@ interface Props {
   title?: string
 }
 
-const { title = 'Noor Sayyad Hospital' } = Astro.props
+const { title = 'Sayyad Hospital' } = Astro.props
 ---
 <!doctype html>
 <html lang="en">
@@ -15,7 +15,7 @@ const { title = 'Noor Sayyad Hospital' } = Astro.props
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
   </head>
-  <body>
+  <body class="bg-white text-slate-800">
     <Nav />
     <main>
       <slot />
